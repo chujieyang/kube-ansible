@@ -2,6 +2,8 @@
 - name: Base environment configuration
   hosts: all
   become: yes
+  gather_facts: false
+  ignore_errors: yes
   roles:
     - common
     - chrony
